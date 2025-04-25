@@ -1,23 +1,24 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+    <header className="bg-[rgba(0,0,0,0.2)] self-stretch z-10 flex min-h-[100px] w-full flex-col items-center font-normal whitespace-nowrap justify-center px-[58px] py-7 border-[rgba(86,86,86,1)] border-b max-md:max-w-full max-md:px-5">
+      <div className="flex w-full max-w-[1393px] items-center gap-[40px_100px] justify-between flex-wrap max-md:max-w-full">
         <Link
           to="/"
-          className="text-2xl font-medium text-white hover:text-white/90 transition-colors"
+          className="self-stretch text-2xl text-white uppercase w-44 my-auto px-10 py-px"
         >
           Bizlaxy
         </Link>
-        <nav className="flex items-center gap-4">
-          <button className="px-6 py-2 text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors">
+        <nav className="self-stretch flex min-w-60 items-center gap-[23px] text-base text-white my-auto">
+          <button className="self-stretch bg-black border gap-2.5 my-auto px-9 py-2.5 rounded-[50px] border-white border-solid max-md:px-5">
             Features
           </button>
-          <button className="px-6 py-2 text-white bg-gradient-to-r from-[#1C4BC4] to-[#9645FF] rounded-full hover:opacity-90 transition-opacity">
-            Benefits
+          <button className="self-stretch w-[136px] my-auto rounded-[50px]">
+            <div className="self-stretch bg-[linear-gradient(90deg,#1C4BC4_0%,#9645FF_100%)] gap-2.5 px-9 py-2.5 rounded-[50px] max-md:px-5">
+              Benefits
+            </div>
           </button>
         </nav>
       </div>
