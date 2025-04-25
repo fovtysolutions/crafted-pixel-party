@@ -3,24 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crafted-pixel-party</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="crafted-pixel-party" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>Bizlaxy - A New Galaxy of Business</title>
+    <meta name="description" content="Bizlaxy - The Ultimate Hub for Professionals in Galaxy World" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
+  <body class="bg-[#050505]">
+    <!-- Header -->
+    <header class="bg-[rgba(0,0,0,0.2)] z-10 flex min-h-[100px] w-full flex-col items-center font-normal whitespace-nowrap justify-center px-[58px] py-7 border-[rgba(86,86,86,1)] border-b">
+      <div class="flex w-full max-w-[1393px] items-center gap-[40px_100px] justify-between flex-wrap">
+        <a href="/" class="self-stretch text-2xl text-white uppercase w-44 my-auto px-10 py-px">
+          Bizlaxy
+        </a>
+        <nav class="self-stretch flex min-w-60 items-center gap-[23px] text-base text-white my-auto">
+          <button class="self-stretch bg-black border gap-2.5 my-auto px-9 py-2.5 rounded-[50px] border-white border-solid">
+            Features
+          </button>
+          <button class="self-stretch w-[136px] my-auto rounded-[50px]">
+            <div class="self-stretch bg-[linear-gradient(90deg,#1C4BC4_0%,#9645FF_100%)] gap-2.5 px-9 py-2.5 rounded-[50px]">
+              Benefits
+            </div>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Hero Section -->
+    <section class="mt-[-100px] w-full">
+      <div class="gap-5 flex max-md:flex-col">
+        <div class="w-[27%] max-md:w-full">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/22e8f5e19f8a469193ec854927e9c5a6/5f6257e449bdec668267e63cdb3f6fc662ac7afe"
+            alt="Decorative space background"
+            class="aspect-[0.66] object-contain w-full"
+          />
+        </div>
+        <div class="w-[73%] ml-5 max-md:w-full max-md:ml-0">
+          <div class="flex grow flex-col mt-[190px] max-md:mt-10">
+            <div class="z-10 flex w-[1011px] max-w-full flex-col items-center justify-center">
+              <div class="flex w-[851px] max-w-full flex-col items-stretch text-white text-center px-[22px]">
+                <h1 class="text-[46px] font-bold">
+                  <span class="font-normal">A New Galaxy of </span>
+                  <span class="font-normal">Business</span>
+                  <span class="font-normal"> Awaits</span>
+                </h1>
+                <p class="text-base font-light mt-[11px]">
+                  Bizlaxy is orbiting your way — a revolutionary platform that
+                  connects professionals, fuels ideas, and unlocks limitless
+                  possibilities. Get ready to experience networking like never
+                  before.
+                </p>
+              </div>
+              <div class="w-[198px] max-w-full mt-[30px]">
+                <button id="waitlistButton" class="waitlist-button text-white text-base font-normal">
+                  Join the Waitlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="waitlistModal" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-sm">
+      <div class="relative bg-[#121212] border border-[rgba(86,86,86,1)] rounded-xl w-full max-w-md p-6 shadow-xl">
+        <button class="modal-close absolute top-4 right-4 text-gray-400 hover:text-white">×</button>
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-bold text-white mb-2">Join the Bizlaxy Waitlist</h2>
+          <p class="text-gray-300">Be among the first to experience the future of business networking.</p>
+        </div>
+        <form id="waitlistForm" class="space-y-4">
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-medium text-white">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              class="w-full px-4 py-3 bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9645FF] focus:border-transparent"
+            />
+            <p id="emailError" class="text-red-400 text-sm hidden"></p>
+          </div>
+          <button
+            type="submit"
+            class="w-full relative flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[linear-gradient(90deg,#1C4BC4_0%,#9645FF_100%)] rounded-full hover:opacity-90 transition-opacity"
+          >
+            Join the Waitlist
+          </button>
+          <p class="text-xs text-gray-400 text-center">
+            By joining, you agree to our Terms of Service and Privacy Policy.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Rest of the sections would go here -->
+    <script src="script.js"></script>
   </body>
 </html>
